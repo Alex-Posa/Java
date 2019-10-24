@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Aufgabe_3_5_Datumsprüfung {
+
+	public static void main(String[] args) {
+		
+		int tag;
+		int monat;
+		int jahr;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.println("Bitte den Tag eingeben: ");
+		tag = sc.nextInt();
+		
+		System.out.println("Bitte den Monat eingeben: ");
+		monat = sc.nextInt();
+		
+		System.out.println("Bitte den Jahr eingeben: ");
+		jahr = sc.nextInt();
+		
+		System.out.println("Ihr eingegebenes Datum: " + tag + "." + monat + "." + jahr);
+
+		if((tag < 1 || tag > 31) && (monat < 1 || monat > 12)) {
+			System.out.println("Datum wurde Inkorrekt angegeben");
+		}
+		
+		
+		if((tag > 1 || tag < 31) && (monat > 1 || monat < 12)) {
+			if(jahr < 1582) {
+				System.out.println("Datum vor dem gregorianischen Kalender!");
+			}
+			
+			if(jahr%4 == 0 && jahr%100 != 0 || jahr%400 == 0) {
+				System.out.println("Das eingegebene Datum ist ein Schaltjahr");
+			}
+		} 
+			
+	
+		
+		
+		
+		sc.close();
+	}
+
+}
