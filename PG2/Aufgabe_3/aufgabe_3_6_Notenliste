@@ -1,35 +1,36 @@
+package aufgabe_3;
 import java.util.Scanner;
 
 public class Aufgabe_3_6_Notenliste {
 	public static void main(String[] args) {
 		
 		int counter = 0,decision=1;
-		String name;
+		String vorname;
+		String nachname;
 		float note;
-		String gesamt;
-		String Num_Nam_Not;
+		String gesamt = "";
+		String num_nam_not;
 		
 		Scanner sc = new Scanner(System.in);
 		
 		while(decision == 1) {
 			counter++;
-			System.out.println("Bitte Namen eingeben: ");
-			name =  sc.nextLine();
+			System.out.println("Bitte Vornamen eingeben: ");
+			vorname =  sc.next();
+			System.out.println("Bitte Nachnamen eingeben: ");
+			nachname =  sc.next();
 			System.out.println("Bitte Note eingeben: ");
 			note = sc.nextFloat();
-			Num_Nam_Not = counter + " " + name + " " + note;
-			gesamt = Num_Nam_Not;
+			num_nam_not = counter + " " + vorname + " " + nachname + " " + note + System.lineSeparator();
+			
 			System.out.println("Weiteren Kursteilnehmer erfassen (0/1)?");
 			decision = sc.nextInt();
 			
-			if(decision == 0) {
-				System.out.println(gesamt);
-				break;
-			}
+			gesamt += num_nam_not;
 			
 			
 		}
-		
+		System.out.println(gesamt);
 		sc.close();
 	}
 }
