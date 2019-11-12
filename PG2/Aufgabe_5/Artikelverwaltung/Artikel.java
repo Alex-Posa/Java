@@ -48,6 +48,10 @@ public class Artikel {
 	public void setArtikelPreis(Preis artikelPreis) {
 		this.artikelPreis = artikelPreis;
 	}
+	
+	public int getListItemById() {
+		return this.artikelnummer;
+	}
 	    
 	// getters and setters end
 	
@@ -60,13 +64,13 @@ public class Artikel {
 		product += getArtikelBezeichnung();
 		product += " ";
 		product += getArtikelnummer();
-		product += " ";
+		product += " [";
 		product += artikelFarbe.getRot();
 		product += " ";
 		product += artikelFarbe.getBlau();
 		product += " ";
 		product += artikelFarbe.getGrün();
-		product += " ";
+		product += "] ";
 		product += artikelPreis.getWert();
 		product += " ";
 		product += artikelPreis.getWährung();
@@ -74,6 +78,17 @@ public class Artikel {
 		System.out.println(product);
 	}
 	
+	public static boolean ifAvailable(List<Artikel> list, int input) {
+		for(Artikel a: list) {
+			if(a.artikelnummer == input && a.artikelPreis.getWert() > 100 ) {
+				a.printProduct();
+				return true;
+			}
+		}
+		System.out.println("Item not found");
+		return false;
+		
+	}
 	
 	
 	
