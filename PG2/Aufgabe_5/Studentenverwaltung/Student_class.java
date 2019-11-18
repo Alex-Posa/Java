@@ -1,66 +1,53 @@
 package studentenverwaltung;
 
+
+import java.util.List;
+
 public class Student {
 
-	private String vorName;
-	private String nachName;
+	private String name;
 	private int matrikelnummer;
-	private String email; 
+	private String email;
 	
-	//
-	
-	public String getVorName() {
-		return vorName;
+	//Getters and Setters
+	public String getName() {
+		return name;
 	}
-
-	public void setVorName(String vorName) {
-		this.vorName = vorName;
+	public void setName(String name) {
+		this.name = name;
 	}
-
-	public String getNachName() {
-		return nachName;
-	}
-
-	public void setNachName(String nachName) {
-		this.nachName = nachName;
-	}
-
 	public int getMatrikelnummer() {
 		return matrikelnummer;
 	}
-
 	public void setMatrikelnummer(int matrikelnummer) {
 		this.matrikelnummer = matrikelnummer;
 	}
-
 	public String getEmail() {
 		return email;
 	}
-
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
-	public Studiengaenge getStudiengang() {
-		return studiengang;
+	
+	//Logic
+	
+	public static boolean ifExists(List<Student> studentList) {
+	
+		return true;
 	}
-
-	public void setStudiengang(Studiengaenge studiengang) {
-		this.studiengang = studiengang;
+	
+	public static void addToList(){
+		
 	}
-
-	private Studiengaenge studiengang;
-
 	
-	
-	//
-	
-	
-	
-	
-	
-	
-	
-
+	public static void printList(List<Student> studentList) {
+		for(Student s: studentList) {
+			System.out.println("Name: " + s.getName());
+			System.out.print("Matrikelnummer: ");
+			System.out.println(s.getMatrikelnummer());
+			System.out.println("EMail: " + s.getEmail());
+			System.out.println();
+			}
+	}
 	
 }
