@@ -1,23 +1,25 @@
 package studentenverwaltung;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Hochschule {
+	private String name;
+	private Studiengänge stgng;
+	
+	//Getters and Setters
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Studiengänge getStgng() {
+		return stgng;
+	}
+	public void setStgng(Studiengänge stgng) {
+		this.stgng = stgng;
+	}
 
-	private String hochSchulName;
-	
-	private Studiengaenge namen;
-	
-	private List<String> studienGaenge = new ArrayList<String>();
-
-	public Hochschule(String hochSchulName, Studiengaenge namen) {
-		super();
-		this.hochSchulName = hochSchulName;
-		this.namen = namen;
-	}	
-	
-	
+	//Logic
 	
 	
 }
