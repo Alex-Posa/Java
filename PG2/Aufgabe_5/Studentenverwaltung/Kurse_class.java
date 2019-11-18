@@ -1,24 +1,40 @@
 package studentenverwaltung;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Kurse {
-
-	private String kursName;
-	
+	private String name;
 	private int credits;
-	
-	private int multiplikator;
-	
+	private double multiplikator;
 	private double note;
 	
-	private List<String> kurse = new ArrayList<String>();
-
-
-
-
-
-
+	//Getters and Setters
+	
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getCredits() {
+		return credits;
+	}
+	public void setCredits(int credits) {
+		this.credits = credits;
+	}
+	public double getMultiplikator() {
+		return multiplikator;
+	}
+	public void setMultiplikator(double multiplikator) {
+		this.multiplikator = multiplikator;
+	}
+	public double getNote() {
+		return note;
+	}
+	public void setNote(float note) {
+		this.note = note;
+	}
+	
+	//Logic
+	
+	
 
 }
